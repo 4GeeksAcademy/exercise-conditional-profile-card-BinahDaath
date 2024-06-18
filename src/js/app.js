@@ -32,6 +32,7 @@ function render(variables = {}) {
   const lastName = variables.lastname == null ? "" : variables.lastname;
   const country = variables.country == null ? "" : variables.country;
   const city = variables.city == null ? "" : variables.city;
+
   // reset the website body with the new html output
   document.querySelector("#widget_content").innerHTML = `<div class="widget">
             ${cover}
