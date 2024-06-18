@@ -32,7 +32,7 @@ function render(variables = {}) {
   const lastName = variables.lastname == null ? "" : variables.lastname;
   const country = variables.country == null ? "" : variables.country;
   const city = variables.city == null ? "" : variables.city;
-
+  const socialMediaPosition = variables.socialMediaPosition;
   // reset the website body with the new html output
   document.querySelector("#widget_content").innerHTML = `<div class="widget">
             ${cover}
@@ -40,7 +40,7 @@ function render(variables = {}) {
           <h1>${name} ${lastName}</h1>
           <h2>Web Developer</h2>
           <h3>${city}, ${country}</h3>
-          <ul class="position-right">
+          <ul class="${socialMediaPosition}">
             <li><a href="https://twitter.com/4geeksacademy"><i class="fab fa-twitter"></i></a></li>
             <li><a href="https://github.com/4geeksacademy"><i class="fab fa-github"></i></a></li>
             <li><a href="https://linkedin.com/school/4geeksacademy"><i class="fab fa-linkedin"></i></a></li>
