@@ -33,6 +33,10 @@ function render(variables = {}) {
   const country = variables.country == null ? "" : variables.country;
   const city = variables.city == null ? "" : variables.city;
   const socialMediaPosition = variables.socialMediaPosition;
+  const twitter = variables.twitter;
+  const github = variables.github;
+  const linkedin = variables.linkedin;
+  const instagram = variables.instagram;
   // reset the website body with the new html output
   document.querySelector("#widget_content").innerHTML = `<div class="widget">
             ${cover}
