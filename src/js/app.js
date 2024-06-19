@@ -33,7 +33,10 @@ function render(variables = {}) {
   const country = variables.country == null ? "" : variables.country;
   const city = variables.city == null ? "" : variables.city;
   const socialMediaPosition = variables.socialMediaPosition;
-  const twitter = variables.twitter;
+  const twitter =
+    variables.twitter == null
+      ? "https://twitter.com/"
+      : "https://twitter.com/" + win;
   const github = variables.github;
   const linkedin = variables.linkedin;
   const instagram = variables.instagram;
