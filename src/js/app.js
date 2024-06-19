@@ -36,27 +36,28 @@ function render(variables = {}) {
   const twitter =
     variables.twitter == null
       ? "https://twitter.com/"
-      : ("https://twitter.com/" + variables.twitter);
-  const github = 
+      : "https://twitter.com/" + variables.twitter;
+  const github =
     variables.github == null
       ? "https://github.com/"
-      : ("https://github.com/" + variables.github);
+      : "https://github.com/" + variables.github;
   const linkedin =
     variables.linkedin == null
       ? "https://linkedin.com/"
-      : ("https://linkedin.com/" + variables.linkedin); 
-  
-  const instagram = 
-    variables.instagram == null
-  ? "https://instagram.com/"
-  : ("https://instagram.com/" + variables.instagram); 
+      : "https://linkedin.com/" + variables.linkedin;
 
+  const instagram =
+    variables.instagram == null
+      ? "https://instagram.com/"
+      : "https://instagram.com/" + variables.instagram;
+
+  const role = variables.role == null ? "" : variables.role;
   // reset the website body with the new html output
   document.querySelector("#widget_content").innerHTML = `<div class="widget">
             ${cover}
           <img src="${variables.avatarURL}" class="photo" />
           <h1>${name} ${lastName}</h1>
-          <h2>Web Developer</h2>
+          <h2>${role}</h2>
           <h3>${city}, ${country}</h3>
           <ul class="${socialMediaPosition}">
             <li><a href="${twitter}"><i class="fab fa-twitter"></i></a></li>
